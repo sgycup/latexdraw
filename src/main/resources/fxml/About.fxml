@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="440.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="net.sf.latexdraw.instrument.AboutController">
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <Tab closable="false" text="%general">
+                <BorderPane>
+                    <center>
+                        <ImageView>
+                            <Image url="@/res/LaTeXDrawSmall.png" requestedWidth="450" requestedHeight="250" preserveRatio="true" smooth="true"/>
+                        </ImageView>
+                    </center>
+                    <bottom>
+                        <Label fx:id="aboutText" wrapText="true" style="-fx-text-alignment:center" />
+                    </bottom>
+                </BorderPane>
+            </Tab>
+            <Tab closable="false" text="%releasenote">
+                <TextArea fx:id="noteText" editable="false"/>
+            </Tab>
+            <Tab closable="false" text="%contributors">
+                <TextArea fx:id="contribText" editable="false"/>
+            </Tab>
+            <Tab closable="false" text="%system">
+                <TextArea fx:id="sysText" editable="false"/>
+            </Tab>
+            <Tab closable="false" text="%licence">
+                <TextArea fx:id="licenseText" editable="false"/>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

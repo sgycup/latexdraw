@@ -1,0 +1,38 @@
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+<TabPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" tabClosingPolicy="UNAVAILABLE" fx:id="tabPane"
+         fx:controller="net.sf.latexdraw.instrument.TabSelector">
+    <Tab closable="false" text="%drawing" fx:id="canvasTab">
+        <SplitPane dividerPositions="0.85">
+            <ScrollPane fx:id="scrollPane">
+                <fx:include fx:id="canvasPane" source="Canvas.fxml"/>
+            </ScrollPane>
+            <ScrollPane maxWidth="310" minWidth="310" prefWidth="310">
+                <VBox maxWidth="310" minWidth="310" prefWidth="310">
+                    <fx:include source="LineStyle.fxml"/>
+                    <fx:include source="FillingStyle.fxml"/>
+                    <fx:include source="ShadowStyle.fxml"/>
+                    <fx:include source="DoubleLineStyle.fxml"/>
+                    <fx:include source="StdGridStyle.fxml"/>
+                    <fx:include source="PlotStyle.fxml"/>
+                    <fx:include source="ArrowStyle.fxml"/>
+                    <fx:include source="TextStyle.fxml"/>
+                    <fx:include source="DotStyle.fxml"/>
+                    <fx:include source="ArcStyle.fxml"/>
+                    <fx:include source="FreehandStyle.fxml"/>
+                    <fx:include source="ShapeTransformationPane.fxml"/>
+                    <fx:include source="Dimension.fxml"/>
+                    <fx:include source="Template.fxml"/>
+                    <fx:include source="DrawingProps.fxml"/>
+                </VBox>
+            </ScrollPane>
+        </SplitPane>
+    </Tab>
+    <fx:include source="CodePanel.fxml"/>
+    <Tab closable="false" text="%prefs" fx:id="prefTab">
+        <fx:include source="Preferences.fxml"/>
+    </Tab>
+</TabPane>
